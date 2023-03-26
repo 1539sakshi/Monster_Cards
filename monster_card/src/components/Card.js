@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Card() {
+function Card({monster}) {
   return (
     <div className='card'>
-      <img src={'https://robohash.org/$19?set=set2&size=180x180'}/>
-      <h1>Monster Name</h1>
-      <p>Monster Email id</p>
+      <img src={'https://robohash.org/${monster.id}?set=set2&size=180x180'}/>
+      <h1>{monster.name}</h1>
+      <p>{monster.email}</p>
     </div>
   );
 }

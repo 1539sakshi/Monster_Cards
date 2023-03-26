@@ -1,15 +1,19 @@
 import React from 'react';
 import Card from "./Card";
 
-function CardLis() {
+function CardLis({monsters}) {
+    console.log("This is" ,monsters);
+    
   return (
     <div className='card-list'>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      {monsters.map(monster => (
+            <Card monster = {monster} />
+            )
+        )
+        }
     </div>
   );
+
 }
 
 export default CardLis;
